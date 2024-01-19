@@ -1,0 +1,11 @@
+{
+  "domain": "bsb_lan",
+  "name": "BSB-LAN",
+  "codeowners": ["@FlorianLaunay"],
+  "config_flow": true,
+  "documentation": "https://github.com/FlorianLaunay/HomeAssistant-BSB-LAN/blob/main/README.md",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "loggers": ["bsb_lan"],
+  "requirements": []
+}

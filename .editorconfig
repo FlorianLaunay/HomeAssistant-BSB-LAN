@@ -1,0 +1,26 @@
+# https://editorconfig.org
+root = true
+
+# Default settings
+[*]
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = false
+
+# Markdown
+[*.md]
+trim_trailing_whitespace = false
+insert_final_newline = true
+
+# YAML
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+
+# Python - PEP8 standard
+[*.{py}]
+indent_style = space
+indent_size = 4
+insert_final_newline = true

@@ -1,0 +1,7 @@
+homeassistant
+aiohttp
+yarl
+voluptuous
+typing_extensions
+packaging
+mashumaro
