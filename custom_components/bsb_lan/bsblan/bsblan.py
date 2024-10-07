@@ -55,7 +55,7 @@ class BSBLANConfig:
     port: int = 80
     request_timeout: int = 10
 
-
+# pylint: disable=R0902
 @dataclass
 class BSBLAN:
     """Main class for handling connections with BSBLAN."""
