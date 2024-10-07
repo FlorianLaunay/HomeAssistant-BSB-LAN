@@ -2,8 +2,6 @@
 
 import dataclasses
 
-from bsblan import BSBLAN, BSBLANConfig, Device, Info, StaticState
-
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import (
     CONF_HOST,
@@ -15,6 +13,7 @@ from homeassistant.const import (
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 
+from .bsblan import BSBLAN, BSBLANConfig, Device, Info, StaticState
 from .const import CONF_PASSKEY, DOMAIN
 from .coordinator import BSBLanUpdateCoordinator
 

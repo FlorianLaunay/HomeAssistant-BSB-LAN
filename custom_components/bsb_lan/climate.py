@@ -4,8 +4,6 @@ from __future__ import annotations
 
 from typing import Any
 
-from bsblan import BSBLANError
-
 from homeassistant.components.climate import (
     ATTR_HVAC_MODE,
     ATTR_PRESET_MODE,
@@ -23,6 +21,7 @@ from homeassistant.helpers.device_registry import format_mac
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.util.enum import try_parse_enum
 
+from .bsblan import BSBLANError
 from . import BSBLanData
 from .const import ATTR_TARGET_TEMPERATURE, DOMAIN
 from .entity import BSBLanEntity
@@ -56,7 +55,7 @@ async def async_setup_entry(
         ]
     )
 
-
+# pylint: disable=W0223
 class BSBLANClimate(BSBLanEntity, ClimateEntity):
     """Defines a BSBLAN climate device."""
 

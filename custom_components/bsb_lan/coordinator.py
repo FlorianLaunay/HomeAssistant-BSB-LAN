@@ -4,13 +4,12 @@ from dataclasses import dataclass
 from datetime import timedelta
 from random import randint
 
-from bsblan import BSBLAN, BSBLANConnectionError, Sensor, State
-
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_HOST
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
+from .bsblan import BSBLAN, BSBLANConnectionError, Sensor, State
 from .const import DOMAIN, LOGGER, SCAN_INTERVAL
 
 

@@ -29,7 +29,7 @@ class BSBLanSensorEntityDescription(SensorEntityDescription):
 
     value_fn: Callable[[BSBLanCoordinatorData], StateType]
 
-
+# pylint: disable=E1123
 SENSOR_TYPES: tuple[BSBLanSensorEntityDescription, ...] = (
     BSBLanSensorEntityDescription(
         key="current_temperature",

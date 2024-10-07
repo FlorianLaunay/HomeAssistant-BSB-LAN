@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from typing import Any
 
-from bsblan import BSBLAN, BSBLANConfig, BSBLANError
 import voluptuous as vol
 
 from homeassistant.config_entries import ConfigFlow, ConfigFlowResult
@@ -13,6 +12,7 @@ from homeassistant.core import callback
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.device_registry import format_mac
 
+from .bsblan import BSBLAN, BSBLANConfig, BSBLANError
 from .const import CONF_PASSKEY, DEFAULT_PORT, DOMAIN
 
 
