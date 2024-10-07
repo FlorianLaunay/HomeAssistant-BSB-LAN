@@ -1,6 +1,8 @@
 # HomeAssistant - BSB-LAN
 
-Custom component to add your [BSB-LAN](https://github.com/fredlcore/BSB-LAN) device into Home Assistant
+Custom component to add your [BSB-LAN](https://github.com/fredlcore/BSB-LAN) device into Home Assistant.
+
+It's a fork from the official [BSB-Lan integration](https://www.home-assistant.io/integrations/bsblan).
 
 ## Installation
 
