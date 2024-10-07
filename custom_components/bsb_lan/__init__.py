@@ -32,7 +32,7 @@ class BSBLanData:
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    """Set up BSB-Lan from a config entry."""
+    """Set up BSB-LAN from a config entry."""
 
     # create config using BSBLANConfig
     config = BSBLANConfig(

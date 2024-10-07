@@ -1,4 +1,4 @@
-"""Exceptions for for BSB-Lan."""
+"""Exceptions for for BSB-LAN."""
 
 from __future__ import annotations
 

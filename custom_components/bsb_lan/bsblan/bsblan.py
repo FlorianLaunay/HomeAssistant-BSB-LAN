@@ -1,4 +1,4 @@
-"""Asynchronous Python client for BSB-Lan."""
+"""Asynchronous Python client for BSB-LAN."""
 
 from __future__ import annotations
 
@@ -350,7 +350,7 @@ class BSBLAN:
         target_temperature: str | None = None,
         hvac_mode: str | None = None,
     ) -> None:
-        """Change the state of the thermostat through BSB-Lan.
+        """Change the state of the thermostat through BSB-LAN.
 
         Args:
         ----
@@ -426,7 +426,7 @@ class BSBLAN:
         nominal_setpoint: float | None = None,
         reduced_setpoint: float | None = None,
     ) -> None:
-        """Change the state of the hot water system through BSB-Lan."""
+        """Change the state of the hot water system through BSB-LAN."""
         state = {}
 
         if operating_mode is not None:

@@ -1,4 +1,4 @@
-"""Models for BSB-Lan."""
+"""Models for BSB-LAN."""
 
 from dataclasses import dataclass, field
 

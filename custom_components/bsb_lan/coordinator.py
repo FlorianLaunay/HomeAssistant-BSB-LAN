@@ -1,4 +1,4 @@
-"""DataUpdateCoordinator for the BSB-Lan integration."""
+"""DataUpdateCoordinator for the BSB-LAN integration."""
 
 from dataclasses import dataclass
 from datetime import timedelta
@@ -22,7 +22,7 @@ class BSBLanCoordinatorData:
 
 
 class BSBLanUpdateCoordinator(DataUpdateCoordinator[BSBLanCoordinatorData]):
-    """The BSB-Lan update coordinator."""
+    """The BSB-LAN update coordinator."""
 
     config_entry: ConfigEntry
 
@@ -32,7 +32,7 @@ class BSBLanUpdateCoordinator(DataUpdateCoordinator[BSBLanCoordinatorData]):
         config_entry: ConfigEntry,
         client: BSBLAN,
     ) -> None:
-        """Initialize the BSB-Lan coordinator."""
+        """Initialize the BSB-LAN coordinator."""
         super().__init__(
             hass,
             logger=LOGGER,
@@ -45,20 +45,20 @@ class BSBLanUpdateCoordinator(DataUpdateCoordinator[BSBLanCoordinatorData]):
         """Get the update interval with a random offset.
 
         Use the default scan interval and add a random number of seconds to avoid timeouts when
-        the BSB-Lan device is already/still busy retrieving data,
+        the BSB-LAN device is already/still busy retrieving data,
         e.g. for MQTT or internal logging.
         """
         return SCAN_INTERVAL + timedelta(seconds=randint(1, 8))
 
     async def _async_update_data(self) -> BSBLanCoordinatorData:
-        """Get state and sensor data from BSB-Lan device."""
+        """Get state and sensor data from BSB-LAN device."""
         try:
             state = await self.client.state()
             sensor = await self.client.sensor()
         except BSBLANConnectionError as err:
             host = self.config_entry.data[CONF_HOST] if self.config_entry else "unknown"
             raise UpdateFailed(
-                f"Error while establishing connection with BSB-Lan device at {host}"
+                f"Error while establishing connection with BSB-LAN device at {host}"
             ) from err
 
         self.update_interval = self._get_update_interval()
