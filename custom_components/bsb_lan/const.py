@@ -7,7 +7,7 @@ import logging
 from typing import Final
 
 # Integration domain
-DOMAIN: Final = "bsblan"
+DOMAIN: Final = "bsb_lan"
 
 LOGGER = logging.getLogger(__package__)
 SCAN_INTERVAL = timedelta(seconds=12)
