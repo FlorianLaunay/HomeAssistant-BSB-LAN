@@ -2,6 +2,9 @@
   "recommendations": [
     "EditorConfig.EditorConfig",
     "ms-python.python",
-    "ms-python.vscode-pylance"
+    "ms-python.vscode-pylance",
+    "ms-python.pylint",
+    "github.vscode-pull-request-github",
+    "github.vscode-github-actions"
   ]
 }
